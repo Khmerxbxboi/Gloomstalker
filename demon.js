@@ -7,14 +7,32 @@ class Demon {
     this.delay = 1200;
     //this.delay = 300;
     this.randomize = 0;
+    this.toggleDelay = 10;
+    this.toggleFlip = false;
   }
 
   display() {
-    fill(255, 0, 0);
-    ellipse(this.x, this.y, this.s);
+    if (this.toggleFlip === false) {
+      imageMode(CENTER);
+      image(demonImg, this.x, this.y, this.w, this.h);
+    } else if (this.toggleFlip === true) {
+      imageMode(CENTER);
+      image(demonImgWalk, this.x, this.y, this.w, this.h);
+    }
   }
 
   move(object) {
+    this.toggleDelay--;
+
+    if (this.toggleDelay < 1) {
+      if (this.toggleFlip === true) {
+        this.toggleFlip = false;
+        this.toggleDelay = 10;
+      } else if (this.toggleFlip === false) {
+        this.toggleFlip = true;
+        this.toggleDelay = 10;
+      }
+    }
     let d = dist(this.x, this.y, object.x, object.y);
 
     if (this.chasePhase === 0) {
@@ -59,7 +77,6 @@ class Demon {
 
         cantEscape = false;
         this.chasePhase = 3;
-        print(this.chasePhase);
         //this functionally just ends all chasePhase behavior until the object is reset.
 
       } else if (this.randomize === 1) {

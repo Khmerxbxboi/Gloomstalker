@@ -10,6 +10,13 @@ function warpLogic() {
       t1 = new Tree(200, 200, 25, 50);
       trees.push(t1);
 
+      //adding key
+      //let k = new Key(300, 100);
+      //keyItem.push(k);
+
+      puzzleB = new puzzleBox(150, 150, 20, 20);
+      puzzleBoxesActive.push(puzzleB);
+
       //always end on screenActive = 1
       screenActive = 1;
     }
@@ -27,10 +34,6 @@ function warpLogic() {
       t1 = new Tree(200, 200, 25, 50);
       trees.push(t1);
 
-
-
-
-      
       t2 = new Tree(50, 110, 25, 50);
       trees.push(t2);
 
@@ -44,7 +47,6 @@ function warpLogic() {
       trees.push(t5);
       screenActive = 1;
 
-
       t6 = new Tree(15, 110, 25, 50);
       trees.push(t6);
 
@@ -56,9 +58,6 @@ function warpLogic() {
 
       t9 = new Tree(150, 180, 25, 50);
       trees.push(t9);
-
-
-
     }
     if (screenActive === 1) {
       screen2();
@@ -68,6 +67,10 @@ function warpLogic() {
       //Top to Bottom Warp
       warp3 = new Warp(192, 320, 20, 20, 192, 50, 8);
       warpsActive.push(warp3);
+
+      dirtM = new dirtMound(100, 100, 20, 20);
+      dirtMoundActive.push(dirtM);
+
       t1 = new Tree(200, 200, 25, 50);
       trees.push(t1);
 
@@ -86,9 +89,6 @@ function warpLogic() {
       t6 = new Home(300, 375, 100, 100);
 
       home.push(t6);
-
-
-
 
       screenActive = 1;
     }
@@ -109,7 +109,6 @@ function warpLogic() {
       t1 = new Tree(200, 200, 25, 50);
       trees.push(t1);
 
-
       t2 = new Tree(200, 110, 25, 50);
       trees.push(t2);
 
@@ -121,8 +120,6 @@ function warpLogic() {
 
       t5 = new Tree(175, 175, 25, 50);
       trees.push(t5);
-
-
 
       screenActive = 1;
     }
@@ -158,6 +155,9 @@ function warpLogic() {
       //Top to Bottom Warp
       warp3 = new Warp(192, 320, 20, 20, 192, 50, 10);
       warpsActive.push(warp3);
+      //Bottom to Top Warp
+      warp4 = new Warp(196, 45, 20, 20, 192, 270, 666);
+      warpsActive.push(warp4);
       t1 = new Tree(200, 200, 25, 50);
       trees.push(t1);
 
@@ -172,9 +172,6 @@ function warpLogic() {
 
       t5 = new Tree(175, 175, 25, 50);
       trees.push(t5);
-
-
-
 
       screenActive = 1;
     }
@@ -203,7 +200,6 @@ function warpLogic() {
       t5 = new Tree(175, 175, 25, 50);
       trees.push(t5);
 
-
       trees.push(t1);
       screenActive = 1;
     }
@@ -221,8 +217,7 @@ function warpLogic() {
       //Bottom to Top Warp
       warp4 = new Warp(192, 0, 20, 20, 192, 270, 3);
       warpsActive.push(warp4);
-      
-      
+
       t1 = new Tree(200, 200, 25, 50);
       trees.push(t1);
 
@@ -234,9 +229,6 @@ function warpLogic() {
 
       t5 = new Tree(175, 175, 25, 50);
       trees.push(t5);
-
-
-
 
       screenActive = 1;
     }
@@ -272,11 +264,9 @@ function warpLogic() {
 
       t1 = new Tree(200, 200, 25, 50);
       trees.push(t1);
-      
-      
+
       t2 = new Tree(100, 200, 25, 50);
       trees.push(t2);
-
 
       t3 = new Tree(175, 200, 25, 50);
       trees.push(t2);
@@ -287,13 +277,6 @@ function warpLogic() {
       t5 = new Tree(175, 75, 25, 50);
       trees.push(t5);
 
-
-
-
-
-
-      
-      
       screenActive = 1;
     }
     if (screenActive === 1) {
@@ -321,7 +304,6 @@ function warpLogic() {
       t3 = new Tree(50, 200, 25, 50);
       trees.push(t3);
 
-
       screenActive = 1;
     }
     if (screenActive === 1) {
@@ -343,7 +325,6 @@ function warpLogic() {
       t2 = new Tree(100, 200, 25, 50);
       trees.push(t2);
 
-
       trees.push(t1);
       screenActive = 1;
     }
@@ -362,9 +343,6 @@ function warpLogic() {
       t2 = new Tree(300, 200, 25, 50);
       trees.push(t2);
 
-
-
-      
       trees.push(t1);
       screenActive = 1;
     }
@@ -381,15 +359,11 @@ function warpLogic() {
       warpsActive.push(warp4);
       t1 = new Tree(200, 100, 25, 50);
       t2 = new Tree(300, 200, 25, 50);
-      t3 = new Tree(400, 50,25,50 );
-      
+      t3 = new Tree(400, 50, 25, 50);
+
       trees.push(t1);
       trees.push(t2);
       trees.push(t3);
-
-
-
-
 
       screenActive = 1;
     }
@@ -403,7 +377,7 @@ function warpLogic() {
       warpsActive.push(warp1);
       t1 = new Tree(200, 200, 25, 50);
       t2 = new Tree(100, 100, 25, 50);
-      
+
       trees.push(t1);
       trees.push(t2);
 
@@ -415,7 +389,18 @@ function warpLogic() {
     if (screenActive === 1) {
       screen14();
     }
+  } else if (currentScreen === 666) {
+    if (screenActive === 0) {
+      
+      let d = new manorDemon();
+      mDemon.push(d);
+
+      screenActive = 1;
+    }
+    if (screenActive === 1) {
+      screen666();
   }
+}
 }
 
 class Warp {
@@ -431,12 +416,20 @@ class Warp {
 
   display() {
     fill(150);
-    rect(this.x, this.y, this.width, this.height);
+    imageMode(CENTER);
+    image(warpTileImg, this.x, this.y, this.w, this.h);
   }
   teleport(object) {
     let d = dist(this.x, this.y, object.x, object.y);
 
-    if (d < 20 && cantEscape === false) {
+    if (this.desiredS === 666) {
+      if (d < 20 && cantEscape === false && keyPickedUp === true) {
+        player[0].x = this.desiredX;
+        player[0].y = this.desiredY;
+        screenCleaner();
+        currentScreen = this.desiredS;
+      }
+    } else if (d < 20 && cantEscape === false) {
       player[0].x = this.desiredX;
       player[0].y = this.desiredY;
       screenCleaner();

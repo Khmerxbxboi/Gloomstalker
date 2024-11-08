@@ -7,11 +7,11 @@ class Tree {
   }
 
   display() {
-   // fill(0, 255, 0);
-  //  rectMode(CENTER);
-   // rect(this.x, this.y, this.w, this.h);
-
-   imageMode(CENTER);
-image(treeImg, this.x, this.y, this.w, this.h);
-  }
+    // fill(0, 255, 0);
+   //  rectMode(CENTER);
+    // rect(this.x, this.y, this.w, this.h);
+ 
+    imageMode(CENTER);
+ image(treeImg, this.x, this.y, this.w, this.h);
+   }
 }

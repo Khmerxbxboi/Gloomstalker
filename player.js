@@ -6,12 +6,19 @@ class PlayerB {
     this.height = tempH;
     this.speed = tempS;
     this.color = 255;
+    this.toggleFlip = false;
+    this.toggleDelay = 10;
   }
 
   display() {
-    fill(this.color);
-    rect(this.x, this.y, this.width, this.height);
-  }
+    if (this.toggleFlip === false) {
+      imageMode(CENTER);
+      image(playerImg, this.x, this.y, this.w, this.h);
+    } else if (this.toggleFlip === true) {
+      imageMode(CENTER);
+      image(playerWalkImg, this.x, this.y, this.w, this.h);
+    }
+  } 
 
   death(object) {
     let d = dist(this.x, this.y, object.x, object.y);
@@ -28,29 +35,26 @@ class PlayerB {
       this.y > tree.y - tree.h / 2 &&
       this.y < tree.y + tree.h / 2
     ) {
-      print("hidden");
-      return true;
-    } else {
-      return false;
-    }
-  }
-  hide(home) {
-    if (
-      this.x > home.x - home.w / 2 &&
-      this.x < home.x + home.w / 2 &&
-      this.y > home.y - home.h / 2 &&
-      this.y < home.y + home.h / 2
-    ) {
-      print("hidden");
+      
       return true;
     } else {
       return false;
     }
   }
 
-
-  
   move(direction) {
+    this.toggleDelay--;
+
+    if (this.toggleDelay < 1) {
+      if (this.toggleFlip === true) {
+        this.toggleFlip = false;
+        this.toggleDelay = 10;
+      } else if (this.toggleFlip === false) {
+        this.toggleFlip = true;
+        this.toggleDelay = 10;
+      }
+    }
+
     switch (direction) {
       case "up":
         this.y -= this.speed;

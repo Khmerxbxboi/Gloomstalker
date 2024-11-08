@@ -1,20 +1,24 @@
-//place visual assets here
-
 function screen1() {
-  background(0);
+  imageMode(CENTER);
+  image(backgroundForestImg, width / 2, height / 2, 384, 320);
   textAlign(RIGHT);
-  text("Screen 1", width - 10, height - 10);
+  //text("Screen 1", width - 10, height - 10);
 
   for (let i = 0; i < warpsActive.length; i++) {
     warpsActive[i].display();
     warpsActive[i].teleport(player[0]);
   }
+  for (let i = 0; i < puzzleBoxesActive.length; i++) {
+    puzzleBoxesActive[i].display();
+    puzzleBoxesActive[i].displayPuzzleCheck(player[0]);
+  }
 }
 
 function screen2() {
-  background(0);
+  imageMode(CENTER);
+  image(backgroundForestImg, width / 2, height / 2, 384, 320);
   textAlign(RIGHT);
-  text("Screen 2", width - 10, height - 10);
+  //text("Screen 2", width - 10, height - 10);
 
   for (let i = 0; i < warpsActive.length; i++) {
     warpsActive[i].display();
@@ -23,20 +27,26 @@ function screen2() {
 }
 
 function screen3() {
-  background(0);
+  imageMode(CENTER);
+  image(backgroundForestImg, width / 2, height / 2, 384, 320);
   textAlign(RIGHT);
-  text("Screen 3", width - 10, height - 10);
+  //text("Screen 3", width - 10, height - 10);
 
   for (let i = 0; i < warpsActive.length; i++) {
     warpsActive[i].display();
     warpsActive[i].teleport(player[0]);
   }
+  for (let i = 0; i < dirtMoundActive.length; i++) {
+    dirtMoundActive[i].display();
+    dirtMoundActive[i].diggingCheck(player[0]);
+  }
 }
 
 function screen4() {
-  background(0);
+  imageMode(CENTER);
+  image(backgroundForestImg, width / 2, height / 2, 384, 320);
   textAlign(RIGHT);
-  text("Screen 4", width - 10, height - 10);
+  //text("Screen 4", width - 10, height - 10);
 
   for (let i = 0; i < warpsActive.length; i++) {
     warpsActive[i].display();
@@ -45,9 +55,10 @@ function screen4() {
 }
 
 function screen5() {
-  background(0);
+  imageMode(CENTER);
+  image(backgroundForestImg, width / 2, height / 2, 384, 320);
   textAlign(RIGHT);
-  text("Screen 5", width - 10, height - 10);
+  //text("Screen 5", width - 10, height - 10);
 
   for (let i = 0; i < warpsActive.length; i++) {
     warpsActive[i].display();
@@ -56,9 +67,10 @@ function screen5() {
 }
 
 function screen6() {
-  background(0);
+  imageMode(CENTER);
+  image(backgroundEntranceImg, width / 2, height / 2, 384, 320);
   textAlign(RIGHT);
-  text("Screen 6", width - 10, height - 10);
+  //text("Screen 6", width - 10, height - 10);
 
   for (let i = 0; i < warpsActive.length; i++) {
     warpsActive[i].display();
@@ -67,9 +79,10 @@ function screen6() {
 }
 
 function screen7() {
-  background(0);
+  imageMode(CENTER);
+  image(backgroundForestImg, width / 2, height / 2, 384, 320);
   textAlign(RIGHT);
-  text("Screen 7", width - 10, height - 10);
+  //text("Screen 7", width - 10, height - 10);
 
   for (let i = 0; i < warpsActive.length; i++) {
     warpsActive[i].display();
@@ -78,9 +91,10 @@ function screen7() {
 }
 
 function screen8() {
-  background(0);
+  imageMode(CENTER);
+  image(backgroundForestImg, width / 2, height / 2, 384, 320);
   textAlign(RIGHT);
-  text("Screen 8", width - 10, height - 10);
+  //text("Screen 8", width - 10, height - 10);
 
   for (let i = 0; i < warpsActive.length; i++) {
     warpsActive[i].display();
@@ -89,9 +103,10 @@ function screen8() {
 }
 
 function screen9() {
-  background(0);
+  imageMode(CENTER);
+  image(backgroundForestImg, width / 2, height / 2, 384, 320);
   textAlign(RIGHT);
-  text("Screen 9", width - 10, height - 10);
+  //text("Screen 9", width - 10, height - 10);
 
   for (let i = 0; i < warpsActive.length; i++) {
     warpsActive[i].display();
@@ -100,9 +115,10 @@ function screen9() {
 }
 
 function screen10() {
-  background(0);
+  imageMode(CENTER);
+  image(backgroundForestImg, width / 2, height / 2, 384, 320);
   textAlign(RIGHT);
-  text("Screen 10", width - 10, height - 10);
+  //text("Screen 10", width - 10, height - 10);
 
   for (let i = 0; i < warpsActive.length; i++) {
     warpsActive[i].display();
@@ -111,9 +127,10 @@ function screen10() {
 }
 
 function screen11() {
-  background(0);
+  imageMode(CENTER);
+  image(backgroundForestImg, width / 2, height / 2, 384, 320);
   textAlign(RIGHT);
-  text("Screen 11", width - 10, height - 10);
+  //text("Screen 11", width - 10, height - 10);
 
   for (let i = 0; i < warpsActive.length; i++) {
     warpsActive[i].display();
@@ -122,9 +139,10 @@ function screen11() {
 }
 
 function screen12() {
-  background(0);
+  imageMode(CENTER);
+  image(backgroundForestImg, width / 2, height / 2, 384, 320);
   textAlign(RIGHT);
-  text("Screen 12", width - 10, height - 10);
+  //text("Screen 12", width - 10, height - 10);
 
   for (let i = 0; i < warpsActive.length; i++) {
     warpsActive[i].display();
@@ -133,9 +151,10 @@ function screen12() {
 }
 
 function screen13() {
-  background(0);
+  imageMode(CENTER);
+  image(backgroundForestImg, width / 2, height / 2, 384, 320);
   textAlign(RIGHT);
-  text("Screen 13", width - 10, height - 10);
+  //text("Screen 13", width - 10, height - 10);
 
   for (let i = 0; i < warpsActive.length; i++) {
     warpsActive[i].display();
@@ -144,9 +163,12 @@ function screen13() {
 }
 
 function screen14() {
-  background(0);
+  imageMode(CENTER);
+  image(backgroundForestImg, width / 2, height / 2, 384, 320);
   textAlign(RIGHT);
-  text("Screen 14", width - 10, height - 10);
+  //text("Screen 14", width - 10, height - 10);
+
+  home[0].display();
 
   for (let i = 0; i < warpsActive.length; i++) {
     warpsActive[i].display();
@@ -155,12 +177,21 @@ function screen14() {
 }
 
 function screen15() {
-  background(0);
+  imageMode(CENTER);
+  image(backgroundForestImg, width / 2, height / 2, 384, 320);
   textAlign(RIGHT);
-  text("Screen 15", width - 10, height - 10);
+  //text("Screen 15", width - 10, height - 10);
 
   for (let i = 0; i < warpsActive.length; i++) {
     warpsActive[i].display();
     warpsActive[i].teleport(player[0]);
   }
+}
+
+function screen666() {
+  imageMode(CENTER);
+  image(backgroundManorImg, width / 2, height / 2, 384, 320);
+  textAlign(RIGHT);
+  //text("Screen 666", width - 10, height - 10);
+
 }
