@@ -41,6 +41,9 @@ let backgroundForestImg;
 let backgroundEntranceImg;
 let backgroundManorImg;
 let warpTileImg;
+let startScreenImg;
+let deathScreenImg;
+let victoryScreenImg;
 
 let home = [];
 
@@ -103,6 +106,9 @@ function preload() {
   backgroundForestImg = loadImage("backgroundForest.png")
   backgroundEntranceImg = loadImage("backgroundEntrance.png")
   backgroundManorImg = loadImage("backgroundManor.png")
+  startScreenImg = loadImage("startScreen.png")
+  deathScreenImg = loadImage("deathScreen.png")
+  victoryScreenImg = loadImage("victoryScreen.png")
 }
 
 function setup() {
@@ -352,12 +358,8 @@ function winScreen() {
   if (victorySound.isPlaying() === false) {
     victorySound.play();
   }
-  background(50);
-  textAlign(CENTER);
-  textSize(32);
-  fill(0, 0, 255);
-  text("DEMON SLAIN", width / 2, 100);
-  text("!!CONGRATULATIONS!!", width / 2, 200);
+  imageMode(CENTER);
+  image(victoryScreenImg, width / 2, height / 2, 384, 320);
 }
 
 function gameOver() {
@@ -374,11 +376,8 @@ function gameOver() {
       mortisSound.play();
     }
 
-    background(25);
-    textAlign(CENTER);
-    textSize(32);
-    fill(255, 0, 0);
-    text("MORTIS", width / 2, height / 2);
+    imageMode(CENTER);
+    image(deathScreenImg, width / 2, height / 2, 384, 320);
     respawnDelay = respawnDelay - 1;
   } else { 
     if (keyPickedUp === false) {
